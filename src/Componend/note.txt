@@ -1,0 +1,77 @@
+import React, { useState, useRef } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlay, faUndo, faPause, faStopwatch, faNotesMedical } from '@fortawesome/free-solid-svg-icons';
+
+const Timmer = () => {
+    const [isRunning, setIsRunning] = useState(false);
+    const [time, setTime] = useState(0);
+    const [laps, setLaps] = useState([]);
+    const [showLaps, setShowLaps] = useState(false); // State to track lap visibility
+    const intervalRef = useRef(null);
+
+    const startStopwatch = () => {
+        if (isRunning) {
+            clearInterval(intervalRef.current);
+        } else {
+            const startTime = Date.now() - time;
+            intervalRef.current = setInterval(() => {
+                setTime(Date.now() - startTime);
+            }, 10);
+        }
+        setIsRunning(!isRunning);
+    };
+
+    const resetStopwatch = () => {
+        clearInterval(intervalRef.current);
+        setTime(0);
+        setIsRunning(false);
+        setLaps([]);
+    };
+
+    const addLap = () => {
+        setLaps([...laps, formatTime(time)]);
+        setShowLaps(true); // Show laps when lap is added
+    };
+
+    const formatTime = (milliseconds) => {
+        const totalSeconds = Math.floor(milliseconds / 1000);
+        const minutes = Math.floor(totalSeconds / 60).toString().padStart(2, '0');
+        const seconds = (totalSeconds % 60).toString().padStart(2, '0');
+        const centiseconds = Math.floor((milliseconds % 1000) / 10).toString().padStart(2, '0');
+        return `${minutes}:${seconds}.${centiseconds}`;
+    };
+
+    return (
+        <div>
+            <div>
+                <h1>{formatTime(time)}</h1>
+                <button onClick={startStopwatch}>
+                    {isRunning ? (
+                        <FontAwesomeIcon icon={faPause} />
+                    ) : (
+                        <FontAwesomeIcon icon={faPlay} />
+                    )}
+                </button>
+                <button onClick={resetStopwatch}>
+                    <FontAwesomeIcon icon={faUndo} />
+                </button>
+                <button onClick={addLap}>
+                    <FontAwesomeIcon icon={faNotesMedical} />
+                </button>
+            </div>
+            {/* Conditionally render lap list */}
+            {showLaps && (
+                <div className='rounded-lg' style={{ color: 'black', fontSize: '40px', marginTop: '100px', marginLeft: '100px', background: '#D1C4E9', marginRight: '200px' }}>
+                    <h2 style={{ marginLeft: '10px' }}>Laps:</h2>
+                    <ul style={{ marginLeft: '80px' }}>
+                        {laps.map((lap, index) => (
+                            <li key={index}>{lap}</li>
+                        ))}
+                    </ul>
+                </div>
+            )}
+        </div>
+    );
+};
+
+export default Timmer;
