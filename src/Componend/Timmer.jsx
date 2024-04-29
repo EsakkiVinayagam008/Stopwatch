@@ -60,7 +60,7 @@ const Timmer = () => {
     const but = {
        
         height: '80px',
-        background: '#00ffff',
+        background: '#D1C4E9',
         width: '80px',
         marginLeft:'370px'
       
@@ -69,7 +69,7 @@ const Timmer = () => {
     const but1 = {
        
         height: '80px',
-        background: '#00ffff',
+        background: '#D1C4E9',
         width: '80px',
         
         marginLeft:'370px'
@@ -77,7 +77,7 @@ const Timmer = () => {
     
     const but2 = {
         height: '80px',
-        background: '#00ffff',
+        background: '#D1C4E9',
         width: '80px',
         marginLeft:'370px'
     };
@@ -104,7 +104,7 @@ const Timmer = () => {
 
           <div style={circle} className='rounded-lg'>
            
-           <h1 style={{ textAlign: 'center',color:'#00ffff' }} className='text-9xl pt-40 font-bold'>{formatTime(time)}</h1>
+           <h1 style={{ textAlign: 'center',color:'' }} className='text-9xl pt-40 font-bold'>{formatTime(time)}</h1>
        </div>
           </div>
 
