@@ -91,7 +91,7 @@ const Timmer = () => {
         <>
           <div className='grid grid-cols-3'>
 
-          <div className='rounded-lg' style={{color:'black', fontSize: '40px',marginTop:'100px',marginLeft:'100px',background:'#D1C4E9',marginRight:'200px'}}>
+          <div className='rounded-lg w-6/12 h-3/6 overflow-auto' style={{color:'black', fontSize: '40px',marginTop:'100px',marginLeft:'100px',background:'#D1C4E9',marginRight:'200px'}}>
           <h2 style={{marginLeft:'10px'}}>Laps:</h2>
                 <ul style={{marginLeft:'80px'}}>
                     {laps.map((lap, index) => (
@@ -108,7 +108,7 @@ const Timmer = () => {
        </div>
           </div>
 
-          </div>+
+          </div>
 
           <div className='grid grid-cols-3' style={{marginTop:'150px'}}>
           <div >
@@ -139,11 +139,7 @@ const Timmer = () => {
                 <FontAwesomeIcon icon={faUndo} style={{ height: '40px', textAlign: 'center', paddingLeft: '3px' }} />
             </button>
          </div>
-
           </div>
-                
-         
-           
         </>
     );
 }
