@@ -18,10 +18,10 @@ const Calculator = () => {
 
   const handleEqual = () => {
     try {
-      // Evaluate the expression and set the input value to the result
+   
       setInputValue(eval(inputValue).toString());
     } catch (error) {
-      // Handle error if expression is invalid
+     
       setInputValue('Error');
     }
   };
