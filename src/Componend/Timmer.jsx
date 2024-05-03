@@ -1,11 +1,6 @@
 import React, { useState,useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay,faUndo ,faPause,faNotesMedical} from '@fortawesome/free-solid-svg-icons';
-
-
-
-
-
 const Timmer = () => {
     document.body.style.background = 'black';
     document.body.style.fontFamily =  'Unna, serif';
@@ -81,12 +76,6 @@ const Timmer = () => {
         width: '80px',
         marginLeft:'370px'
     };
-
-    
-
-   
-
-
     return (
         <>
           <div className='grid grid-cols-3'>
