@@ -14,7 +14,7 @@ const Mainpage = () => {
         display:'inline-block',
         position:'absolute',
         top:'250px',
-        left:'500px'
+        left:'850px'
     }
     const calculator={
         height:'400px',
