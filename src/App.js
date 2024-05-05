@@ -3,7 +3,7 @@ import './App.css';
 import './index.css';
 import Mainpage from './Componend/Mainpage';
 import Timmer from './Componend/Timmer';
-import Calculator from './Componend/Calculator';
+
 
 function App() {
   return (
