@@ -10,10 +10,10 @@ function App() {
     <div>
       <BrowserRouter>
         <Routes>
-          {/* Define the routes */}
+         
           <Route path='/' element={<Mainpage />} />
           <Route path='/Stopwatch' element={<Timmer />} />
-          <Route path='/Calculator' element={<Calculator/>} />
+         
         </Routes>
       </BrowserRouter>
     </div>
