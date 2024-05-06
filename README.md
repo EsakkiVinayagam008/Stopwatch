@@ -68,3 +68,12 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## imports
+
+### install tailwind css
+ Go to this page: https://tailwindcss.com/docs/installation
+### import font awesome icons
+ Go to this page: https://fontawesome.com/icons 
+### import google fonts
+ Go to this page: https://fonts.google.com/
